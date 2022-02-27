@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+
+/* RESET CSS */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    background-color: #f7f7f7;
+    font-family: 'Urbanist', sans-serif !important;
+    user-select: none;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* RESET CSS ENDS */
+
+/* GLOBAL CSS */
+.p0 {
+    padding: 0 !important;
+}
+.px0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.py0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.p1 {
+    padding: 10px;
+}
+.p2 {
+    padding: 20px;
+}
+.px1 {
+    padding: 0 10px;
+}
+.px2 {
+    padding: 0 20px;
+}
+.pt2 {
+    padding-top: 20px;
+}
+.mt2 {
+    margin-top: 20px;
+}
+.m0 {
+    margin: 0 !important;
+}
+
+.mr10 {
+    margin-right: 10px !important;
+}
+.mr20 {
+    margin-right: 20px !important;
+}
+.text-center {
+    text-align: center;
+    justify-content: center;
+}
+.pointer {
+  cursor: pointer;
+}
+.form-row {
+    margin-bottom: 20px;
+    &.plus2 {
+        margin-bottom: 40px;
+    }
+}
+
+.text-success {
+  color: green;
+}
+.text-danger {
+  color: red;
+}
+.text-info {
+  color: skyblue;
+}
+.text-default {
+  color: #999;
+}
+
+/* GLOBAL CSS ENDS */
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+.btn-trans {
+    background-color: transparent;
+    color: #222;
+    box-shadow: none;
+    border: 1px solid #222;
+}
+
+.btn-upload {
+    background-color: transparent !important;
+    border: 1px dashed #222 !important;
+    box-shadow: none !important;
+    height: 58px;
+}
+
+.green {
+  color: #1dad1d;
+}
+
+.heart {
+    background-color: crimson;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 45%; 
+    top: 45%;
+    animation: heartbeat 1.25s infinite;
+  }
+  .heart::before,
+  .heart::after {
+    content: "";
+    background-color: crimson;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    animation: pulsecolor 1.25s infinite;
+  }
+  .heart::before {
+    top: -7px;
+    left: 0;
+  }
+  
+  .heart::after {
+    top: 0;
+    left: 7px;
+  }
+  
+  
+  @keyframes heartbeat {
+      0% {
+      transform: scale(1)
+                 rotate(-45deg);
+        }
+      10% {
+      transform: scale(1.25)
+                 rotate(-45deg);
+      background-color: #ef3953;
+        }
+    100% {
+        transform: scale(1)
+                   rotate(-45deg);
+    }
+  }
+  
+  @keyframes pulsecolor {
+    10% {
+    background-color: #ef3953;
+    }
+  }
+  
+  @keyframes blink {
+   0%, 100% {
+          transform: scale(1, .05);
+      }
+      5%,
+      95% {
+          transform: scale(1, 1);
+      }
+  }
+  
+
+  @-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating .5s linear infinite;
+    -moz-animation: rotating .5s linear infinite;
+    -ms-animation: rotating .5s linear infinite;
+    -o-animation: rotating .5s linear infinite;
+    animation: rotating .5s linear infinite;
+  }
